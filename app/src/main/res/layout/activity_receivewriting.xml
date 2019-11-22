@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="10">
+
+    <RelativeLayout
+        android:id="@+id/select_text_tool"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary">
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" : 당신의 작품 "
+            android:textSize="30sp"
+            android:textColor="#ffffff"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="2dp"></TextView>
+        
+
+        <Button
+            android:id="@+id/sendPostToServer_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="업로드"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:layout_alignParentRight="true"
+            android:background="@color/colorAccent"></Button>
+
+    </RelativeLayout>
+
+    <!-- 버튼에 따라 텍스트 툴, 그림 툴, 이미지 업로드 기능이 활성화되도록 한다. -->
+    <LinearLayout
+        android:id="@+id/container_posting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_weight="10"
+        tools:ignore="Orientation">
+
+        <RelativeLayout
+            android:id="@+id/contentsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/topLayout"
+            android:layout_above="@+id/bottomLayout">
+
+            <TextView
+                android:id="@+id/TextView_get"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="당신의 이야기"
+                android:textSize="25sp"
+                android:layout_marginBottom="20dp"
+                ></TextView>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

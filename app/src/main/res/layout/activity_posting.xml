@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="10">
+
+    <RelativeLayout
+        android:id="@+id/select_post_tool"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary">
+
+        <ImageButton
+            android:id="@+id/writingMode_btn"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/btn_text"
+            android:layout_margin="5dp">
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/drawingMode_btn"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/btn_pencil"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@+id/writingMode_btn">
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/attachImage_btn"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/btn_image"
+
+            android:layout_toRightOf="@+id/drawingMode_btn">
+        </ImageButton>
+
+        <Button
+            android:id="@+id/sendPostToServer_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="완료"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:layout_alignParentRight="true"
+            android:background="@color/colorAccent"></Button>
+
+    </RelativeLayout>
+
+    <!-- 버튼에 따라 텍스트 툴, 그림 툴, 이미지 업로드 기능이 활성화되도록 한다. -->
+    <LinearLayout
+        android:id="@+id/container_posting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_weight="10"
+        tools:ignore="Orientation">
+    </LinearLayout>
+
+</LinearLayout>

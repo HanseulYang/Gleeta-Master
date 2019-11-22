@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.MyPage">
+
+    <!-- 하단 플로우팅 액션 버튼은 coordinator레이아웃이랑 같이 사용해야 한다. -->
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/mypage_post_list_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:ignore="MissingContents">
+            <TextView
+                android:id="@+id/mypage_post_list_has_no_item_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:text="아직 작성한 게시물이 없습니다. 게시물을 작성하고 공유해보세요!"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/mypage_post_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp" />
+
+        </LinearLayout>
+
+        <!-- 하단 플로우팅 액션 버튼 -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/upload_post_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="8dp"
+            android:src="@drawable/iconmonstr_plus_white_2_240" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</FrameLayout>

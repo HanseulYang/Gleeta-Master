@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="90dp"
+                android:background="#ffffff"
+                android:src="@drawable/icon_sendcheck"></ImageView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="업로드가 완료 되었습니다!"
+                android:textSize="28sp"></TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="하나의 멋진 스토리가 완성되었네요. \n다른 스토리도 둘러볼까요?"
+                android:textSize="23sp"></TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                <Button
+                    android:id="@+id/goto_home_btn"
+                    android:layout_width="140dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginLeft="48dp"
+                    android:text="당연하죠!"
+                    android:background="@color/colorPrimary"
+                ></Button>
+
+                <Button
+                    android:id="@+id/goto_mypage_btn"
+                    android:layout_width="140dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_margin="50dp"
+                    android:text="다음에요!"
+                    android:background="@color/colorPrimary"
+                ></Button>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        app:itemIconTint="#ffffff"
+        app:itemTextColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/bottom_menu"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

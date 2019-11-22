@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#e5aeb6</color>
+    <color name="colorPrimaryDark">#c16b7b</color>
+    <color name="colorAccent">#c16b7b</color>
+
+    <color name="drawRed">#f75656</color>
+    <color name="drawBlue">#565af7</color>
+    <color name="drawGreen">#348f47</color>
+    <color name="drawWhite">#ffffff</color>
+
+</resources>
